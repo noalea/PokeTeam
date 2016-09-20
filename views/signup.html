@@ -1,0 +1,11 @@
+<div class="view signup" ng-controller="signupCtrl">
+  <div class="alert themed-border" id="alertSignup">
+    <p>Username already exists! Please choose another.</p>
+  </div>
+  <form ng-submit="signUp()">
+    <input type="email" required class="themed-border" ng-model="signup.email" placeholder="Email">
+    <input type="text" required maxlength="14" class="themed-border" ng-model="signup.username" placeholder="Username">
+    <input type="password" required class="themed-border" ng-model="signup.password" placeholder="Password">
+    <button type="submit" class="themed-border pointer">Go</button>
+  </form>
+</div>

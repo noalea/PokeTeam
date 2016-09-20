@@ -1,0 +1,42 @@
+*
+  box-sizing: border-box
+  font-family: 'Miriam Libre', sans-serif!important
+  font-weight: 700
+  transition: 0.5s all ease
+  -moz-transition: 0.5s all ease
+  -webkit-transition: 0.5s all ease
+
+body
+  background: url(../images/bg_body.jpg) no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  font-family: 'Miriam Libre', sans-serif
+  margin: 0
+  height: 100vh
+  width: 100vw
+
+.pointer
+  cursor: pointer
+
+.themed-border
+  border-radius: 5px
+  border-width: 2px
+  box-shadow: 0px 0px 5px $gray
+  padding: 10px
+
+::-webkit-input-placeholder
+  color: $placeholder
+::-moz-placeholder
+  color: $placeholder
+
+textarea:focus, input:focus, button:focus
+  outline: none
+
+.view
+  max-width: 1024px
+  margin: 0 auto
+
+.fa
+  font: normal normal normal 14px/1 FontAwesome!important

@@ -1,0 +1,85 @@
+<div class="createteam view" ng-controller="createCtrl">
+  <div class="top-section">
+    <!-- Search -->
+    <div class="search_bar">
+      <input type="text" class="themed-border" placeholder="Search Pokémon" ng-model="query" ng-focus="focus=true">
+      <div id="search-results" ng-show="focus">
+        <div class="search-result pointer" ng-repeat="item in pokemonList | search:query" ng-bind="item" ng-click="setQuery(item); pokeInfo(item)"></div>
+      </div>
+    </div>
+
+    <!-- Go to Sign Up -->
+    <button ng-click="submitTeam()" type="button" name="button" class="themed-border sign-up-btn pointer">Go</button>
+
+  </div>
+  <div class="middle-section">
+    <div class="pokemon-picked-img">
+      <div class="img-placeholder themed-border" data-toggle="tooltip" title="{{chosenPoke}}">
+        <img src="{{chosenPokemon[0]}}" alt="" />
+      </div>
+    </div>
+    <div class="pokemon-picked-info">
+      <div class="top">
+        <p class="type themed-border">
+          {{chosenPokemon[1]}}
+        </p>
+        <div class="addPokemon themed-border pointer" ng-click="addPokemon(chosenPoke, chosenPokemon[0])">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="bottom themed-border">
+        <table>
+          <tr>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Height</td>
+            <td class="toRight">{{chosenPokemon[2]}}</td>
+          </tr>
+          <tr>
+            <td>Weight</td>
+            <td class="toRight">{{chosenPokemon[3]}}</td>
+          <tr>
+            <td>Catch Rate</td>
+            <td class="toRight">{{chosenPokemon[4]}}</td>
+          </tr>
+          <tr>
+            <td>Base Happiness</td>
+            <td class="toRight">{{chosenPokemon[5]}}</td>
+          </tr>
+          <tr>
+            <td>Base EXP</td>
+            <td class="toRight">{{chosenPokemon[6]}}</td>
+          </tr>
+          <tr>
+            <td>Growth Rate</td>
+            <td class="toRight">{{chosenPokemon[7]}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="alert themed-border" id="alert">
+      <p>You have not chosen 6 Pokémon yet.</p>
+    </div>
+  </div>
+  <div class="bottom-section">
+    <div class="pokemon-block themed-border">
+      <img id="block1" src="" alt="" />
+    </div>
+    <div class="pokemon-block themed-border">
+      <img id="block2" src="" alt="" />
+    </div>
+    <div class="pokemon-block themed-border">
+      <img id="block3" src="" alt="" />
+    </div>
+    <div class="pokemon-block themed-border">
+      <img id="block4" src="" alt="" />
+    </div>
+    <div class="pokemon-block themed-border">
+      <img id="block5" src="" alt="" />
+    </div>
+    <div class="pokemon-block themed-border">
+      <img id="block6" src="" alt="" />
+    </div></div>
+</div>

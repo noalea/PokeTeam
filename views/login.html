@@ -1,0 +1,10 @@
+<div class="view signup" ng-controller="loginCtrl">
+  <div class="alert themed-border" id="alertLogin">
+    <p>Username and/or password are incorrect!</p>
+  </div>
+  <form ng-submit="logIn()">
+    <input type="text" required class="themed-border" ng-model="login.username" placeholder="Username">
+    <input type="password" required class="themed-border" ng-model="login.password" placeholder="Password">
+    <button type="submit" class="themed-border pointer">Go</button>
+  </form>
+</div>
